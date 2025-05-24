@@ -1,0 +1,6 @@
+html,
+body {
+  @apply bg-white text-gray-800;
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+}
