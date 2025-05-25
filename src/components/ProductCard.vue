@@ -13,7 +13,15 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps({ product: Object })
+interface Product {
+  id: number;
+  name: string;
+  price: number;
+  image: string;
+}
+
+const props = defineProps<{ product: Product }>();
+
 import { useCartStore } from '../store/cartStore'
 const cartStore = useCartStore()
 const addToCart = (id: number) => cartStore.addToCart(id)
